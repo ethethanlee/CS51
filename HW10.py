@@ -14,3 +14,6 @@ mejores = [i for i in student if i[0][:4] in majors]
 
 print(mejores)
 
+#bob = {"class": 90, "math": 10}
+
+#for class, grade in bob.items():

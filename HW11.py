@@ -14,4 +14,11 @@ tim = [['CSCI51P', 90], ['CSCI62', 92],['Math101', 87],['Econ51', 97]]
 avg_list = reduce(lambda x,y: x + y, list(map(lambda x: x[1], tim)), 0)/len(tim)
 print(avg_list)
 
+# import numpy as np
 
+# bob = np.array(bob)
+# print(bob[:, 1].astype(int))
+
+# bob_scores = bob[:, 1].astype(int)
+# bob_avg = np.average(bob_scores)
+# print(bob_avg)
