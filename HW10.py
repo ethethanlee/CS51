@@ -14,4 +14,3 @@ mejores = [i for i in student if i[0][:4] in majors]
 
 print(mejores)
 
-print(a_list)
