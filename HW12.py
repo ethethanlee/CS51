@@ -3,6 +3,8 @@ from functools import reduce
 records = {"tim": {('CS','51P'): 90, ('CS','62'): 92, ('PE','90'): 87, ('Econ','51'): 97}, 
 "bob": {('CS','51P'): 78, ('Bio','52'): 94, ('PE','18'): 60, ('Math','101'): 95, ('Math','60'): 82}}
 
+
+
 def avg_grade(book,student):
     average = 0
     for y in book[student].values():
@@ -22,7 +24,16 @@ def average_grade(boo,studen):
 print(average_grade(records,"tim"))
 
 
+def course_roster(boook, classs):
+    peepole = []
+    for z,x in boook.items():
+        for y in x.keys():
+            if classs in y[0] + y[1]:
+                peepole.append(z)
+    return peepole
+
+print(course_roster(records, "CS51P"))
 
 
 
-#average + x for x in book.values():
+#x[0] + x[1] = 0[0] + 0[1]
