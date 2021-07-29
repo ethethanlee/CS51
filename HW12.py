@@ -34,6 +34,16 @@ def course_roster(boook, classs):
 
 print(course_roster(records, "CS51P"))
 
+def good_performance(rec, threshold):
+    end = {}
+    for person,valss in rec.items():
+        for koy, value in valss.items():
+            if value > threshold:
+                end.setdefault(person, [])
+                end[person].append(koy[0] + koy[1])
+                
+    return end
 
 
-#x[0] + x[1] = 0[0] + 0[1]
+
+print(good_performance(records, 90))
