@@ -1,8 +1,16 @@
 
-# def read_records(filename):
+
 
 import csv
-with open('CS51.csv', newline='') as csvfile:
-    spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
-    for row in spamreader:
-        print(', '.join(row))
+
+def read_records(filename):
+    with open(filename, newline='') as csvfile:
+        spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+        ceesv = ''
+        for row in spamreader:
+            ceesv = ceesv + ', '.join(row) + '\n'
+    return ceesv
+
+
+
+print(read_records('CS51.csv'))
