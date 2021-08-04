@@ -26,7 +26,10 @@ def read_records(filename):
 
 #  so need to find the grade, then do a for x in range(80 ,100) then insert them into a new list; 'none' will cause list to be at the end
 
-records = [['Lucy', ['CS51P', 90], ['CS54', 85], ['CS62', None], ['CS101', None], ['CS105', None], ['CS140', None]], ['Bob',  ['CS51P', 82], ['CS54', 93], ['CS62', 91], ['CS101', None], ['CS105', 88], ['CS140', None]],['Alice',['CS51P', None], ['CS54', 93], ['CS62', 97], ['CS101', 91], ['CS105', None], ['CS140', 85]]]
+records = [
+['Lucy', ['CS51P', 90], ['CS54', 85], ['CS62', None], ['CS101', None], ['CS105', None], ['CS140', None]], 
+['Bob',  ['CS51P', 82], ['CS54', 93], ['CS62', 91], ['CS101', None], ['CS105', 88], ['CS140', None]],
+['Alice',['CS51P', None], ['CS54', 93], ['CS62', 97], ['CS101', 91], ['CS105', None], ['CS140', 85]]]
 
 
 def sortbycoursegrade(book, cclass):
@@ -49,5 +52,34 @@ def sortbycoursegrade(book, cclass):
 
 
 
-print(sortbycoursegrade(records, 'CS51P'))
-            # so like what i want to do is go thru all at 80, then all at 81, etc WHILE LOOP
+# print(sortbycoursegrade(records, 'CS51P'))
+
+#use sort function
+
+# A function that returns the 'year' value:
+def myFunc(e):
+  return e['year']
+
+cars = [{'car': 'Ford', 'year': 2005},{'car': 'Mitsubishi', 'year': 2000},{'car': 'BMW', 'year': 2019},{'car': 'VW', 'year': 2011}]
+
+cars.sort(key=lambda x: myFunc(x))
+# print(cars)
+# it does my func onto cars on its own
+
+
+
+def grade(leest,clash):
+    # records[0][1][0] is CS51P
+    # student is the thing that will be lambda'd, but 
+    for x in range(1,3):
+            if clash == leest[x][0] and leest[x][1] != None:
+                return leest[x][1]
+            else:
+                return 10928309128
+
+
+def sort_these(leeest, classs):
+    leeest.sort(key = (lambda x: grade(x,classs)))
+
+sort_these(records, 'CS51P')
+print(records)
